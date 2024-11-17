@@ -1,0 +1,29 @@
+// * Variables for adaptive
+$pc: em; // px
+$tablet: 61.99875em; // 991.98px
+$mobile: 47.99875em; // 767.98px
+$mobileSmall: 29.99875em; // 479.98px
+
+// *PC
+// @media (max-width: $pc) {
+//     ._container {
+//         max-width: 60.625rem;
+//     }
+// }
+
+// *Tablet
+// @media (max-width: $tablet) {
+//     ._container {
+//         max-width: 46.875rem;
+//     }
+// }
+
+// *Mobile
+// @media (max-width: $mobile) {
+//     ._container {
+//         max-width: none;
+//     }
+// }
+
+// =======================================================================================================
+// * Variables for ...

@@ -1,0 +1,202 @@
+// * import functions
+@use 'tools/functions' as func;
+// * import variables
+@use 'tools/variables' as var;
+
+// =======================================================================================================
+.footer {
+
+    &__main {
+        padding: func.rem(74) func.rem(0);
+
+        @media (max-width: var.$tablet) {
+            padding: func.rem(40) func.rem(0);
+        }
+
+        @media (max-width: var.$mobile) {
+            padding: func.rem(25) func.rem(0);
+        }
+    }
+
+    &__container {}
+
+    &__body {
+        display: grid;
+        grid-template-columns: 1fr repeat(3, minmax(func.rem(95), func.rem(150))) 1fr;
+        gap: func.rem(30);
+
+        @media (max-width: var.$mobile) {
+            grid-template-columns: 1fr;
+            text-align: center;
+            gap: func.rem(20);
+        }
+    }
+
+    &__item {
+
+        &_payments {
+            justify-self: end;
+        }
+
+        @media (max-width: var.$mobile) {
+            justify-self: stretch;
+        }
+    }
+
+    &__logo {
+        margin: func.rem(0) func.rem(0) func.rem(12) func.rem(0);
+    }
+
+    &__text {
+        max-width: func.rem(270);
+        color: #5C5F6A;
+        line-height: func.prc(24, 16);
+
+        &:not(:last-child) {
+            margin: func.rem(0) func.rem(0) func.rem(30) func.rem(0);
+        }
+
+        @media (max-width: var.$tablet) {
+            &:not(:last-child) {
+                margin: func.rem(0) func.rem(0) func.rem(15) func.rem(0);
+            }
+        }
+
+        @media (max-width: var.$mobile) {
+            &:not(:last-child) {
+                margin: func.rem(0) auto func.rem(15) auto;
+            }
+        }
+    }
+
+    &__title {
+        font-weight: 500;
+        line-height: func.prc(24, 16);
+        color: #878A92;
+        text-transform: uppercase;
+        margin: func.rem(0) func.rem(0) func.rem(40) func.rem(0);
+
+        @media (max-width: var.$tablet) {
+            margin: func.rem(0) func.rem(0) func.rem(20) func.rem(0);
+        }
+    }
+
+    &__nav {}
+
+    &__bottom {
+        padding: func.rem(0) func.rem(0) func.rem(27) func.rem(0);
+
+        @media (max-width: var.$tablet) {
+            padding: func.rem(0) func.rem(0) func.rem(15) func.rem(0);
+        }
+
+        p {
+            text-align: center;
+            color: #5C5F6A;
+            line-height: func.prc(24, 16);
+
+            &::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: func.rem(2);
+                background-color: rgba(135, 138, 146, .5);
+                margin: func.rem(0) func.rem(0) func.rem(27) func.rem(0);
+            }
+
+            @media (max-width: var.$tablet) {
+                &::before {
+                    margin: func.rem(0) func.rem(0) func.rem(15) func.rem(0);
+                }
+            }
+        }
+    }
+}
+
+// =======================================================================================================
+.social {
+    display: flex;
+    align-items: center;
+    gap: func.rem(20);
+
+    @media (max-width: var.$mobile) {
+        justify-content: center;
+    }
+
+    &_start {
+        justify-content: start;
+    }
+
+    &__item {}
+
+    &__link {}
+
+    &__icon {
+        display: block;
+        width: func.rem(24);
+        height: func.rem(24);
+        fill: #5C5F6A;
+        transition: fill 0.5s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                fill: #0E1422;
+            }
+        }
+    }
+}
+
+// =======================================================================================================
+.nav-footer {
+
+    &__list {}
+
+    &__item {
+        &:not(:last-child) {
+            margin: func.rem(0) func.rem(0) func.rem(15) func.rem(0);
+        }
+    }
+
+    &__link {
+        color: #5C5F6A;
+        line-height: func.prc(24, 16);
+        transition: color 0.5s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: #0E1422;
+            }
+        }
+    }
+}
+
+// =======================================================================================================
+.payments {
+    display: flex;
+    align-items: center;
+    gap: func.rem(20);
+
+    @media (max-width: var.$mobile) {
+        justify-content: center;
+    }
+
+    &__item {}
+
+    &__icon {
+        display: block;
+        width: func.rem(30);
+        height: func.rem(32);
+
+        &_amex {
+            display: block;
+            width: func.rem(56);
+            height: func.rem(32);
+        }
+
+        &_visa {
+            display: block;
+            width: func.rem(42);
+            height: func.rem(32);
+        }
+    }
+}

@@ -1,0 +1,43 @@
+@use 'tools/functions' as func;
+// =======================================================================================================
+// * Import fonts
+// &display=swap - что бы шрифты грузились коректно
+// &subset=cyrillic-ext - для кирилических сайтов
+// example - @import url("https://fonts.googleapis.com/css?family=Montserrat:500,600,700&display=swap&subset=cyrillic-ext");
+@import url(https://fonts.googleapis.com/css?family=Inter:regular,500,600,700&display=swap);
+
+// =======================================================================================================
+body {
+    font-family: Inter;
+    font-weight: 400;
+    font-size: func.rem(16);
+    color: #0E1422;
+
+    &._lock {
+        overflow: hidden;
+    }
+}
+
+// =======================================================================================================
+// * сontainer
+._container {
+    max-width: func.rem(1146);
+    margin: 0 auto;
+    padding: 0px 15px;
+}
+
+// =======================================================================================================
+// * wrapper
+.wrapper {
+    overflow: hidden;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    // press footer
+    .main {
+        flex: 1 1 auto;
+        // fix slider
+        min-width: 0;
+    }
+}

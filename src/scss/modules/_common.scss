@@ -1,0 +1,684 @@
+// * import functions
+@use 'tools/functions' as func;
+// * import variables
+@use 'tools/variables' as var;
+
+// =======================================================================================================
+// * Для общих стилей
+.logo {}
+
+// =======================================================================================================
+.section-title {
+    font-weight: 700;
+    font-size: func.rem(24);
+    line-height: func.prc(30, 24);
+    color: #0E1422;
+}
+
+// =======================================================================================================
+.button {
+    display: inline-block;
+    background-color: #0E1422;
+    color: #fff;
+    padding: func.rem(9.5) func.rem(24);
+    border-radius: func.rem(5);
+    font-weight: 500;
+    font-size: func.rem(16);
+    line-height: func.prc(24, 16);
+    transition: background-color 0.5s ease 0s;
+
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: #1c263d;
+        }
+    }
+
+    &_arrow {
+        display: inline-flex;
+        align-items: center;
+        gap: func.rem(12);
+    }
+
+    &__arrow {
+        display: block;
+        width: func.rem(22);
+        height: func.rem(22);
+
+        @media (max-width: var.$mobile) {
+            width: func.rem(20);
+            height: func.rem(20);
+        }
+    }
+}
+
+// =======================================================================================================
+.main-form {
+    position: relative;
+
+    @media (max-width: var.$tablet) {
+        width: 100%;
+        max-width: calc(100% - func.rem(150));
+    }
+
+    &__button-search {
+        background-color: transparent;
+        position: absolute;
+        top: func.rem(10);
+        left: func.rem(12);
+    }
+
+    &__input {
+        max-width: func.rem(265);
+        padding: func.rem(0) func.rem(35) func.rem(0) func.rem(47);
+        min-height: func.rem(45);
+        color: #878A92;
+        font-weight: 500;
+        line-height: func.prc(24, 16);
+        border: 2px solid rgba(135, 138, 146, .5);
+        border-radius: func.rem(7);
+
+        &::placeholder {
+            color: #878A92;
+            font-weight: 500;
+            line-height: func.prc(24, 16);
+        }
+
+        @media (max-width: var.$tablet) {
+            max-width: none;
+            min-width: func.rem(400);
+            width: 100%;
+        }
+
+        @media (max-width: var.$mobile) {
+            min-width: func.rem(200);
+        }
+
+        &_main {
+            max-width: none;
+            width: 100%;
+            padding: func.rem(0) func.rem(15) func.rem(0) func.rem(15);
+        }
+
+        &_small {
+            min-width: func.rem(345);
+
+            @media (max-width: var.$mobileSmall) {
+                min-width: func.rem(245);
+            }
+        }
+    }
+
+    &__icon-search {
+        display: block;
+        width: func.rem(26);
+        height: func.rem(26);
+    }
+
+    &__button {
+        flex: 1 1 auto;
+
+        &_review {
+            width: 100%;
+            min-width: func.rem(345);
+
+            @media (max-width: var.$mobileSmall) {
+                min-width: func.rem(245);
+            }
+        }
+    }
+
+    label {
+        display: block;
+
+        &:not(:last-child) {
+            margin: func.rem(0) func.rem(0) func.rem(20) func.rem(0);
+        }
+
+        span {
+            display: block;
+            margin: func.rem(0) func.rem(0) func.rem(10) func.rem(0);
+        }
+    }
+
+    &__textarea {
+        resize: none;
+        width: 100%;
+        min-width: func.rem(345);
+        color: #878A92;
+        font-weight: 500;
+        line-height: func.prc(24, 16);
+        border: 2px solid rgba(135, 138, 146, .5);
+        border-radius: func.rem(7);
+        padding: func.rem(10) func.rem(15) func.rem(10) func.rem(15);
+        min-height: func.rem(150);
+
+        &::placeholder {
+            color: #878A92;
+            font-weight: 500;
+            line-height: func.prc(24, 16);
+        }
+
+        @media (max-width: var.$mobileSmall) {
+            min-width: func.rem(245);
+        }
+    }
+}
+
+// =======================================================================================================
+.swiper {}
+
+.swiper-wrapper {
+    padding: func.rem(0) func.rem(0) func.rem(60) func.rem(0);
+
+    @media (max-width: var.$tablet) {
+        padding: func.rem(0) func.rem(0) func.rem(45) func.rem(0);
+    }
+}
+
+.swiper-pagination {
+
+    &_product {
+        margin: func.rem(0) func.rem(0) func.rem(25) func.rem(0) !important;
+
+        @media (max-width: var.$mobile) {
+            margin: func.rem(0) func.rem(0) func.rem(15) func.rem(0) !important;
+        }
+    }
+}
+
+.swiper-slide {}
+
+.swiper-pagination-bullet {
+    background: #5C5F6A !important;
+    width: func.rem(10) !important;
+    height: func.rem(10) !important;
+}
+
+.swiper-pagination-bullet-active {}
+
+// =======================================================================================================
+.product {
+    display: flex;
+    flex-direction: column;
+    gap: func.rem(15);
+
+    &__image {
+        display: block;
+        padding: func.rem(0) func.rem(0) func.prc(327, 312) func.rem(0);
+
+        img {}
+    }
+
+    &__title {
+        color: #000000;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: func.rem(2);
+            background-color: #0E1422;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: width 0.5s ease 0s;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+
+        h3 {
+            font-weight: 500;
+            font-size: func.rem(16);
+            line-height: func.prc(24, 16);
+            color: #000000;
+        }
+    }
+
+    &__details {
+        display: flex;
+        align-items: center;
+        gap: func.rem(15);
+    }
+
+    &__stock {}
+
+    &__price {
+        display: block;
+        color: #474B57;
+        line-height: func.prc(24, 16);
+    }
+}
+
+.in-stock {
+    display: inline-block;
+    font-weight: 500;
+    font-size: func.rem(14);
+    line-height: func.prc(20, 14);
+    color: #0E1422;
+    border: func.rem(2) solid #E6E7E8;
+    border-radius: func.rem(100);
+    padding: func.rem(5) func.rem(15);
+}
+
+// =======================================================================================================
+// * common for page product
+.page-header {
+    padding: func.rem(140) func.rem(0) func.rem(0) func.rem(0);
+
+    @media (max-width: var.$tablet) {
+        padding: func.rem(180) func.rem(0) func.rem(0) func.rem(0);
+    }
+}
+
+
+.breadbcrumbs {
+
+    &_line {
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: func.rem(2);
+            background-color: rgba(92, 95, 106, .5);
+            margin: func.rem(0) func.rem(0) func.rem(18) func.rem(0);
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: func.rem(12);
+    }
+
+    &__item {}
+
+    &__link {
+        display: flex;
+        align-items: center;
+        gap: func.rem(12);
+        color: #5C5F6A;
+        font-weight: 500;
+        line-height: func.prc(24, 16);
+        transition: color 0.5s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: #0E1422;
+            }
+        }
+    }
+
+    &__icon {
+        display: block;
+        width: func.rem(12);
+        height: func.rem(18);
+        transform: rotate(-90deg);
+    }
+
+    &__current {
+        color: #0E1422;
+        font-weight: 500;
+        line-height: func.prc(24, 16);
+    }
+}
+
+
+.quantity {
+    max-width: func.rem(165);
+    display: inline-flex;
+    align-items: center;
+    gap: func.rem(18);
+    border: func.rem(2) solid #E6E7E8;
+    border-radius: func.rem(5);
+    margin: func.rem(0) func.rem(0) func.rem(30) func.rem(0);
+
+    &__button {
+        padding: func.rem(12) func.rem(16);
+        background-color: transparent;
+        transition: background-color 0.5s ease 0s;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #E6E7E8;
+            }
+        }
+
+        &_minus {}
+
+        &_plus {}
+    }
+
+    &__icon {
+        display: block;
+        width: func.rem(20);
+        height: func.rem(20);
+    }
+
+    &__current {}
+
+    &__input {
+        width: 100%;
+        font-size: func.rem(16);
+        text-align: center;
+        font-weight: 500;
+        line-height: func.prc(18, 16);
+        color: #202533;
+    }
+}
+
+
+.form-product {
+    display: flex;
+    flex-direction: column;
+    gap: func.rem(15);
+
+    &_margin-bottom {
+        margin: func.rem(0) func.rem(0) func.rem(20) func.rem(0);
+    }
+
+    &__fieldset {}
+
+    &__legend {
+        font-weight: 500;
+        font-size: func.rem(14);
+        color: #5C5F6A;
+        line-height: func.prc(24, 14);
+        text-transform: uppercase;
+        margin: func.rem(0) func.rem(0) func.rem(10) func.rem(0);
+
+        &_black {
+            color: #0E1422;
+        }
+    }
+
+    &__body {
+        display: inline-flex;
+        align-items: center;
+        gap: func.rem(15);
+
+        &_grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, func.rem(40));
+            gap: func.rem(8);
+        }
+    }
+
+    &__real-radio {
+        width: 0;
+        height: 0;
+        position: absolute;
+        opacity: 0;
+        z-index: -1;
+
+        &:checked+.form-product__custom-color-radio::before {
+            opacity: 1;
+        }
+
+        &:checked+.form-product__custom-size-radio {
+            border: func.rem(2) solid #0E1422;
+            color: #0E1422;
+        }
+    }
+
+    &__custom-color-radio {
+        display: inline-block;
+        width: func.rem(24);
+        height: func.rem(24);
+        background-color: #A3BEF8;
+        border-radius: 50%;
+        cursor: pointer;
+        position: relative;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: func.rem(32);
+            height: func.rem(32);
+            border: func.rem(2) solid #0E1422;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: opacity 0.5s ease 0s;
+        }
+
+        &_yellow {
+            background-color: #FFD58A;
+        }
+
+        &_green {
+            background-color: #83B18B;
+        }
+    }
+
+    &__custom-size-radio {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: func.rem(40);
+        height: func.rem(40);
+        background-color: #fff;
+        border: func.rem(2) solid #E6E7E8;
+        border-radius: func.rem(5);
+        color: #5C5F6A;
+        transition: border 0.5s ease 0s, color 0.5s ease 0s;
+        font-weight: 500;
+        font-size: func.rem(14);
+        cursor: pointer;
+        position: relative;
+    }
+}
+
+
+.control-select {
+    width: func.rem(200);
+    position: relative;
+
+    &__select {
+        width: 100%;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-color: #fff;
+        border: func.rem(2) solid #5C5F6A;
+        font-family: inherit;
+        font-size: func.rem(16);
+        font-weight: 500;
+        line-height: func.prc(24, 16);
+        border-radius: func.rem(5);
+        padding: func.rem(10) func.rem(40) func.rem(10) func.rem(10);
+        color: #5C5F6A;
+        cursor: pointer;
+    }
+
+    &__icon {
+        display: block;
+        width: func.rem(16);
+        height: func.rem(16);
+        position: absolute;
+        top: 50%;
+        right: 7%;
+        transform: translate(0px, -50%);
+        pointer-events: none;
+    }
+}
+
+// =======================================================================================================
+// * modal styles
+.modal {
+    border-radius: func.rem(8);
+
+    &__content {
+        display: grid;
+        grid-template-columns: func.rem(345);
+        padding: func.rem(45) func.rem(40);
+        position: relative;
+
+        @media (max-width: var.$mobileSmall) {
+            grid-template-columns: func.rem(245);
+            padding: func.rem(40) func.rem(20);
+        }
+    }
+
+    &__close {
+        background-color: transparent;
+        padding: func.rem(5);
+        position: absolute;
+        top: func.rem(10);
+        right: func.rem(10);
+    }
+
+    &__icon-close {
+        display: block;
+        width: func.rem(20);
+        height: func.rem(20);
+        pointer-events: none;
+    }
+}
+
+// =======================================================================================================
+// * common for page catalog
+.pagging {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__inner {
+        display: inline-flex;
+        gap: func.rem(15);
+        padding: func.rem(5) func.rem(10);
+        border: func.rem(2) solid #E9E9EB;
+        border-radius: func.rem(5);
+
+        @media (max-width: var.$mobileSmall) {
+            gap: func.rem(8);
+            padding: func.rem(5) func.rem(5);
+        }
+    }
+
+    &__prev {}
+
+    &__button {
+        background-color: transparent;
+        padding: func.rem(5);
+    }
+
+    &__arrow {
+        display: block;
+        width: func.rem(20);
+        height: func.rem(20);
+        pointer-events: none;
+        fill: #5C5F6A;
+
+        &_active {
+            fill: #0E1422;
+        }
+
+        &_left {
+            transform: rotate(90deg);
+        }
+
+        &_right {
+            transform: rotate(-90deg);
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        gap: func.rem(8);
+    }
+
+    &__item {}
+
+    &__link {
+        display: inline-block;
+        padding: func.rem(10) func.rem(17);
+        background-color: #fff;
+        transition: background-color 0.5s ease 0s;
+        border-radius: func.rem(5);
+        font-weight: 500;
+        font-size: func.rem(14);
+        color: #474B57;
+
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: #F6F6F6;
+            }
+        }
+
+        &_active {
+            background-color: #F6F6F6;
+            color: #0E1422;
+        }
+
+        @media (max-width: var.$mobileSmall) {
+            padding: func.rem(10) func.rem(10);
+        }
+    }
+
+    &__next {}
+}
+
+// range
+.noUi-handle {
+    width: func.rem(15) !important;
+    height: func.rem(15) !important;
+    top: func.rem(-4) !important;
+    right: 0 !important;
+    border-radius: 50% !important;
+    background: #0E1422 !important;
+    border: none !important;
+    box-shadow: none !important;
+    cursor: pointer !important;
+
+    &::before {
+        display: none !important;
+    }
+
+    &::after {
+        display: none !important;
+    }
+}
+
+.noUi-handle-lower {
+    right: func.rem(-7) !important;
+}
+
+.noUi-tooltip {
+    background: #0E1422 !important;
+    color: #FFFFFF !important;
+    border-radius: func.rem(5) !important;
+    font-weight: 500 !important;
+    font-size: func.rem(14) !important;
+}
+
+.noUi-tooltip {
+    display: none !important;
+}
+
+.noUi-active .noUi-tooltip {
+    display: block !important;
+}
+
+.noUi-connects {
+    border-radius: func.rem(10) !important;
+    background: #E6E7E8 !important;
+}
+
+.noUi-connect {
+    background: #878A92 !important;
+}
+
+.noUi-horizontal {
+    height: func.rem(10) !important;
+}

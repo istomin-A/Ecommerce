@@ -1,0 +1,20 @@
+@use 'sass:math';
+
+// Функции для перевода из px в rem, em, %
+// rem
+@function rem($px) {
+    $result: math.div($px, 16) + rem;
+    @return $result;
+}
+
+// em
+@function em($px, $value) {
+    $result: math.div($px, $value) + em;
+    @return $result;
+}
+
+// prc (%)
+@function prc($pxOne, $pxTwo) {
+    $result: math.div($pxOne, $pxTwo) * 100%;
+    @return $result;
+}

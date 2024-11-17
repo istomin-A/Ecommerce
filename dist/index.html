@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css?_v=20241117133157">
+    <title>Ecommerce</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+    <div class="header__top">
+        <div class="header__container _container">
+            <p>Get 25% OFF on your first order. Order Now</p>
+        </div>
+    </div>
+    <div class="header__main">
+        <div class="header__container _container">
+            <div class="header__body">
+                <a href="#" class="logo"><img src="img/general/logo.svg" alt="logo"></a>
+                <div class="menu">
+                    <button class="burger" aria-label="Открыть меню" aria-expanded="false"><span></span></button>
+                    <nav class="menu__body">
+                        <ul class="menu__list">
+                            <li class="menu__item"><a href="#" class="menu__link">Home</a></li>
+                            <li class="menu__item">
+                                <div class="spoller-menu">
+                                    <div class="spoller-menu__inner">
+                                        <button class="spoller-menu__button _spoller-button"
+                                            data-spoller-button="spoller-menu" aria-expanded="false"
+                                            aria-controls="spoller-body">Categories</button>
+                                        <svg class="spoller-menu__icon _spoller-arrow"
+                                            data-spoller-arrow="spoller-menu">
+                                            <use xlink:href="img/icons/icons.svg#spoller-arrow"></use>
+                                        </svg>
+                                    </div>
+                                    <div class="spoller-menu__body _spoller-body" data-spoller-path="spoller-menu"
+                                        id="spoller-body" aria-hidden="true">
+                                        <ul>
+                                            <li><a href="#" class="spoller-menu__link _spoller-link"
+                                                    data-spoller-link="spoller-menu" tabindex="-1">T-shirt</a></li>
+                                            <li><a href="#" class="spoller-menu__link _spoller-link"
+                                                    data-spoller-link="spoller-menu" tabindex="-1">Hoodie</a></li>
+                                            <li><a href="#" class="spoller-menu__link _spoller-link"
+                                                    data-spoller-link="spoller-menu" tabindex="-1">Sweater</a></li>
+                                            <li><a href="#" class="spoller-menu__link _spoller-link"
+                                                    data-spoller-link="spoller-menu" tabindex="-1">Trousers</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="menu__item"><a href="#" class="menu__link">About</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <form action="#" class="main-form">
+                    <input type="text" class="main-form__input" name="form-header-search" id="form-header-search"
+                        placeholder="Search products">
+                    <button class="main-form__button-search">
+                        <svg class="main-form__icon-search">
+                            <use xlink:href="img/icons/icons.svg#search"></use>
+                        </svg>
+                    </button>
+                </form>
+                <div class="header__actions">
+                    <a href="#" class="header__cart">
+                        <svg class="header__icon-cart">
+                            <use xlink:href="img/icons/icons.svg#cart"></use>
+                        </svg>
+                    </a>
+                    <a href="#" class="header__user">
+                        <svg class="header__icon-user">
+                            <use xlink:href="img/icons/icons.svg#user"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <main class="main">
+            <section class="intro">
+                <div class="intro__container _container">
+                    <div class="intro__body">
+                        <div class="intro__content">
+                            <h1 class="intro__title">Fresh Arrivals Online</h1>
+                            <p class="intro__text">Discover Our Newest Collection Today.</p>
+                            <a href="#" class="intro__button button button_arrow">
+                                View Collection
+                                <svg class="button__arrow">
+                                    <use xlink:href="img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="intro__media">
+                            <img class="intro__ellipse" src="img/intro/ellipse.svg" alt="">
+                            <img class="intro__star" src="img/intro/star.svg" alt="">
+                            <picture><source srcset="img/intro/boy.webp" type="image/webp"><img class="intro__boy" src="img/intro/boy.png" alt="boy"></picture>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="advantages">
+                <div class="advantages__container _container">
+                    <div class="advantages__body">
+                        <div class="advantages__item">
+                            <img class="advantages__icon" src="img/advantages/delivery.svg" alt="delivery">
+                            <div class="advantages__title">Free Shipping</div>
+                            <p class="advantages__text">
+                                Upgrade your style today and get FREE shipping on all orders! Don't miss out.
+                            </p>
+                        </div>
+                        <div class="advantages__item">
+                            <img class="advantages__icon" src="img/advantages/guarantee.svg" alt="guarantee">
+                            <div class="advantages__title">Satisfaction Guarantee</div>
+                            <p class="advantages__text">
+                                Shop confidently with our Satisfaction Guarantee: Love it or get a refund.
+                            </p>
+                        </div>
+                        <div class="advantages__item">
+                            <img class="advantages__icon" src="img/advantages/payment.svg" alt="payment">
+                            <div class="advantages__title">Secure Payment</div>
+                            <p class="advantages__text">
+                                Your security is our priority. Your payments are secure with us.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="product-slider">
+                <div class="product-slider__container _container">
+                    <h2 class="product-slider__title section-title">Best Selling</h2>
+                    <div class="product-slider__slider swiper">
+                        <div class="product-slider__swiper swiper-wrapper">
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-slider__product product">
+                                    <a href="#" class="product__image _ibg">
+                                        <picture><source srcset="img/product-slider/сlassic-tees.webp" type="image/webp"><img src="img/product-slider/сlassic-tees.jpg" alt="сlassic-tees"></picture>
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>Classic Monochrome Tees</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$35.00</span>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-slider__product product">
+                                    <a href="#" class="product__image _ibg">
+                                        <picture><source srcset="img/product-slider/monochromat-tees.webp" type="image/webp"><img src="img/product-slider/monochromat-tees.jpg" alt="monochromat-tees"></picture>
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>Monochromatic Wardrobe</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$27.00</span>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-slider__product product">
+                                    <a href="#" class="product__image _ibg">
+                                        <picture><source srcset="img/product-slider/white-tees.webp" type="image/webp"><img src="img/product-slider/white-tees.jpg" alt="white-tees"></picture>
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>Essential Neutrals</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$22.00</span>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-slider__product product">
+                                    <a href="#" class="product__image _ibg">
+                                        <picture><source srcset="img/product-slider/black-tees.webp" type="image/webp"><img src="img/product-slider/black-tees.jpg" alt="black-tees"></picture>
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>UTRAANET Black</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$43.00</span>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-slider__product product">
+                                    <a href="#" class="product__image _ibg">
+                                        <picture><source srcset="img/product-slider/сlassic-tees.webp" type="image/webp"><img src="img/product-slider/сlassic-tees.jpg" alt="сlassic-tees"></picture>
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>Classic Monochrome Tees</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$35.00</span>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-slider__product product">
+                                    <a href="#" class="product__image _ibg">
+                                        <picture><source srcset="img/product-slider/white-tees.webp" type="image/webp"><img src="img/product-slider/white-tees.jpg" alt="white-tees"></picture>
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>Essential Neutrals</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$22.00</span>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="browse">
+                <div class="browse__container _container">
+                    <div class="browse__body">
+                        <div class="browse__content">
+                            <h2 class="browse__title section-title">Browse Our Fashion Paradise!</h2>
+                            <p class="browse__text">
+                                Step into a world of style and explore our diverse collection of clothing categories.
+                            </p>
+                            <a href="#" class="browse__button button button_arrow">
+                                Start Browsing
+                                <svg class="button__arrow">
+                                    <use xlink:href="img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="browse__media">
+                            <picture><source srcset="img/browse/image.webp" type="image/webp"><img class="browse__image" src="img/browse/image.png" alt="sweater"></picture>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="product-slider">
+                <div class="product-slider__container _container">
+                    <h2 class="product-slider__title section-title">Featured</h2>
+                    <div class="product-slider__slider swiper">
+                        <div class="product-slider__swiper swiper-wrapper">
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-slider__product product">
+                                    <a href="#" class="product__image _ibg">
+                                        <picture><source srcset="img/product-slider/sweater.webp" type="image/webp"><img src="img/product-slider/sweater.jpg" alt="sweater"></picture>
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>Elegant Ebony Sweatshirts</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$35.00</span>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-slider__product product">
+                                    <a href="#" class="product__image _ibg">
+                                        <picture><source srcset="img/product-slider/hoodie.webp" type="image/webp"><img src="img/product-slider/hoodie.jpg" alt="hoodie"></picture>
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>Sleek and Cozy Black</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$57.00</span>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-slider__product product">
+                                    <a href="#" class="product__image _ibg">
+                                        <picture><source srcset="img/product-slider/raw-black-tees.webp" type="image/webp"><img src="img/product-slider/raw-black-tees.jpg" alt="raw-black-tees"></picture>
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>Raw Black Tees</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$19.00</span>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-slider__product product">
+                                    <a href="#" class="product__image _ibg">
+                                        <picture><source srcset="img/product-slider/black-mockup-tees.webp" type="image/webp"><img src="img/product-slider/black-mockup-tees.jpg" alt="black-mockup-tees"></picture>
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>MOCKUP Black</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$30.00</span>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-slider__product product">
+                                    <a href="#" class="product__image _ibg">
+                                        <picture><source srcset="img/product-slider/hoodie.webp" type="image/webp"><img src="img/product-slider/hoodie.jpg" alt="hoodie"></picture>
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>Sleek and Cozy Black</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$57.00</span>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-slider__product product">
+                                    <a href="#" class="product__image _ibg">
+                                        <picture><source srcset="img/product-slider/black-mockup-tees.webp" type="image/webp"><img src="img/product-slider/black-mockup-tees.jpg" alt="black-mockup-tees"></picture>
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>MOCKUP Black</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$30.00</span>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="subscribe">
+                <div class="subscribe__container _container">
+                    <div class="subscribe__body">
+                        <div class="subscribe__info">
+                            <h2 class="subscribe__title section-title">Join Our Newsletter</h2>
+                            <p class="subscribe__text">We love to surprise our subscribers with occasional gifts.</p>
+                        </div>
+                        <form action="#" class="subscribe__form main-form">
+                            <input type="email" class="main-form__input main-form__input_main" name="form-email"
+                                id="form-email" placeholder="Your email address" required>
+                            <button class="main-form__button button" type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+    <div class="footer__main">
+        <div class="footer__container _container">
+            <div class="footer__body">
+                <div class="footer__item">
+                    <img src="img/general/logo.svg" alt="logo" class="footer__logo logo">
+                    <p class="footer__text">DevCut is a YouTube channel for practical project-based learning.</p>
+                    <ul class="social">
+                        <li class="social__item">
+                            <a href="#" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="img/icons/icons.svg#instagram"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="#" class="social__link">
+                                <svg class="social__icon">
+                                    <use xlink:href="img/icons/icons.svg#youtube"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__item">
+                    <h4 class="footer__title">SUPPORT</h4>
+                    <nav class="footer__nav nav-footer">
+                        <ul class="nav-footer__list">
+                            <li class="nav-footer__item"><a href="#" class="nav-footer__link">FAQ</a></li>
+                            <li class="nav-footer__item"><a href="#" class="nav-footer__link">Terms of use</a></li>
+                            <li class="nav-footer__item"><a href="#" class="nav-footer__link">Privacy Policy</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__item">
+                    <h4 class="footer__title">COMPANY</h4>
+                    <nav class="footer__nav nav-footer">
+                        <ul class="nav-footer__list">
+                            <li class="nav-footer__item"><a href="#" class="nav-footer__link">About us</a></li>
+                            <li class="nav-footer__item"><a href="#" class="nav-footer__link">Contact</a></li>
+                            <li class="nav-footer__item"><a href="#" class="nav-footer__link">Careers</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__item">
+                    <h4 class="footer__title">SHOP</h4>
+                    <nav class="footer__nav nav-footer">
+                        <ul class="nav-footer__list">
+                            <li class="nav-footer__item"><a href="#" class="nav-footer__link">My Account</a></li>
+                            <li class="nav-footer__item"><a href="#" class="nav-footer__link">Checkout</a></li>
+                            <li class="nav-footer__item"><a href="#" class="nav-footer__link">Cart</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="footer__item footer__item_payments">
+                    <h4 class="footer__title">ACCEPTED PAYMENTS</h4>
+                    <ul class="payments">
+                        <li class="payments__item">
+                            <svg class="payments__icon">
+                                <use xlink:href="img/icons/icons.svg#mastercard"></use>
+                            </svg>
+                        </li>
+                        <li class="payments__item">
+                            <svg class="payments__icon payments__icon_amex">
+                                <use xlink:href="img/icons/icons.svg#amex"></use>
+                            </svg>
+                        </li>
+                        <li class="payments__item">
+                            <svg class="payments__icon payments__icon_visa">
+                                <use xlink:href="img/icons/icons.svg#visa"></use>
+                            </svg>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="footer__container _container">
+            <p>© 2023 DevCut. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+    </div>
+
+    <dialog class="modal" data-modal-target="modal-share">
+    <div class="modal__content">
+        <button class="modal__close _modal-close" type="button">
+            <svg class="modal__icon-close">
+                <use xlink:href="img/icons/icons.svg#close"></use>
+            </svg>
+        </button>
+        <div class="share">
+            <div class="share__title">Copy Link</div>
+            <div class="share__body">
+                <div class="share__link">https://devcut.io/ecommerce/product/num#1234567?query=!less/123</div>
+                <button class="share__copy">
+                    <svg class="share__icon-copy">
+                        <use xlink:href="img/icons/icons.svg#copy"></use>
+                    </svg>
+                </button>
+                <div class="share__out"></div>
+            </div>
+            <div class="share__title">Share</div>
+            <ul class="social social_start">
+                <li class="social__item">
+                    <a href="#" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href="img/icons/icons.svg#instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a href="#" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href="img/icons/icons.svg#youtube"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</dialog>
+
+<dialog class="modal" data-modal-target="modal-reviews">
+    <div class="modal__content">
+        <button class="modal__close _modal-close" type="button">
+            <svg class="modal__icon-close">
+                <use xlink:href="img/icons/icons.svg#close"></use>
+            </svg>
+        </button>
+        <div class="write-review">
+            <div class="write-review__title">Write Review</div>
+            <form action="#" class="write-review__form main-form">
+                <label>
+                    <span>Email</span>
+                    <input type="email" class="main-form__input main-form__input_main main-form__input_small"
+                        name="form-review-email" id="form-review-email" placeholder="Your email address" required>
+                </label>
+                <label>
+                    <span>Full name</span>
+                    <input type="text" class="main-form__input main-form__input_main main-form__input_small"
+                        name="form-review-name" id="form-review-name" placeholder="Your full name" required>
+                </label>
+                <label>
+                    <span>Review</span>
+                    <textarea name="form-review-review" id="form-review-review" class="main-form__textarea"
+                        placeholder="Write review"></textarea>
+                </label>
+                <button class="main-form__button_review button" type="submit">Submit Your Review</button>
+            </form>
+        </div>
+    </div>
+</dialog>
+
+    <script src="js/app.min.js?_v=20241117133157"></script>
+</body>
+
+</html>

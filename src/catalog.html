@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html',{
+"title": "Ecommerce - catalog"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/header.html',{})
+        <main class="main">
+            <div class="page-header">
+                <div class="page-header__container _container">
+                    <nav class="breadbcrumbs breadbcrumbs_line">
+                        <ul class="breadbcrumbs__list">
+                            <li class="breadbcrumbs__item">
+                                <a href="#" class="breadbcrumbs__link">
+                                    Ecommerce
+                                    <svg class="breadbcrumbs__icon">
+                                        <use xlink:href="@img/icons/icons.svg#spoller-arrow"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="breadbcrumbs__item">
+                                <span class="breadbcrumbs__current">Catalog</span>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="catalog">
+                <div class="catalog__container _container">
+                    <div class="catalog__body">
+                        <div class="catalog__filter filter-catalog">
+                            <div class="filter-catalog__inner">
+                                <div class="filter-catalog__title">Categories</div>
+                                <div class="filter-catalog__body">
+                                    <label class="filter-catalog__label">
+                                        <input type="checkbox" required name="filter-categories"
+                                            class="filter-catalog__checkbox _checkbox-real">
+                                        <span class="filter-catalog__checkbox-custom _checkbox-custom"></span>
+                                        <span class="filter-catalog__info">
+                                            Perfume
+                                        </span>
+                                    </label>
+                                    <label class="filter-catalog__label">
+                                        <input type="checkbox" required name="filter-categories"
+                                            class="filter-catalog__checkbox _checkbox-real">
+                                        <span class="filter-catalog__checkbox-custom _checkbox-custom"></span>
+                                        <span class="filter-catalog__info">
+                                            Trousers
+                                        </span>
+                                    </label>
+                                    <label class="filter-catalog__label">
+                                        <input type="checkbox" required name="filter-categories"
+                                            class="filter-catalog__checkbox _checkbox-real">
+                                        <span class="filter-catalog__checkbox-custom _checkbox-custom"></span>
+                                        <span class="filter-catalog__info">
+                                            Shoe
+                                        </span>
+                                    </label>
+                                    <label class="filter-catalog__label">
+                                        <input type="checkbox" required name="filter-categories"
+                                            class="filter-catalog__checkbox _checkbox-real">
+                                        <span class="filter-catalog__checkbox-custom _checkbox-custom"></span>
+                                        <span class="filter-catalog__info">
+                                            Handbag
+                                        </span>
+                                    </label>
+                                    <label class="filter-catalog__label">
+                                        <input type="checkbox" required name="filter-categories"
+                                            class="filter-catalog__checkbox _checkbox-real">
+                                        <span class="filter-catalog__checkbox-custom _checkbox-custom"></span>
+                                        <span class="filter-catalog__info">
+                                            Hat
+                                        </span>
+                                    </label>
+                                    <label class="filter-catalog__label">
+                                        <input type="checkbox" required name="filter-categories"
+                                            class="filter-catalog__checkbox _checkbox-real">
+                                        <span class="filter-catalog__checkbox-custom _checkbox-custom"></span>
+                                        <span class="filter-catalog__info">
+                                            Thermos
+                                        </span>
+                                    </label>
+                                </div>
+                                <form class="form-product form-product_margin-bottom">
+                                    <fieldset class="form-product__fieldset">
+                                        <legend class="form-product__legend form-product__legend_black">
+                                            Available Colors
+                                        </legend>
+                                        <div class="form-product__body form-product__body_grid">
+                                            <label>
+                                                <input type="radio" name="filter-color" class="form-product__real-radio"
+                                                    value="blue">
+                                                <span class="form-product__custom-color-radio"></span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="filter-color" class="form-product__real-radio"
+                                                    value="yellow">
+                                                <span
+                                                    class="form-product__custom-color-radio form-product__custom-color-radio_yellow"></span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="filter-color" class="form-product__real-radio"
+                                                    value="green">
+                                                <span
+                                                    class="form-product__custom-color-radio form-product__custom-color-radio_green"></span>
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                    <fieldset class="form-product__fieldset">
+                                        <legend class="form-product__legend form-product__legend_black">
+                                            Select Size
+                                        </legend>
+                                        <div class="form-product__body form-product__body_grid">
+                                            <label>
+                                                <input type="radio" name="filter-size" class="form-product__real-radio"
+                                                    value="S">
+                                                <span class="form-product__custom-size-radio">S</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="filter-size" class="form-product__real-radio"
+                                                    value="M">
+                                                <span class="form-product__custom-size-radio">M</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="filter-size" class="form-product__real-radio"
+                                                    value="X">
+                                                <span class="form-product__custom-size-radio">X</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="filter-size" class="form-product__real-radio"
+                                                    value="XL">
+                                                <span class="form-product__custom-size-radio">XL</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="filter-size" class="form-product__real-radio"
+                                                    value="XXL">
+                                                <span class="form-product__custom-size-radio">XXL</span>
+                                            </label>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                                <div class="filter-catalog__title">Categories</div>
+                                <div class="filter-catalog__price" id="filter-price"></div>
+                            </div>
+                        </div>
+                        <div class="catalog__main main-catalog">
+                            <div class="main-catalog__inner">
+                                <div class="main-catalog__text">Showing 1-9 of 36 results.</div>
+                                <div class="control-select">
+                                    <select name="sort-reviews" class="control-select__select">
+                                        <option value="1" selected>By popularity</option>
+                                        <option value="2">By rating</option>
+                                        <option value="3">Recent</option>
+                                    </select>
+                                    <svg class="control-select__icon">
+                                        <use xlink:href="@img/icons/icons.svg#spoller-arrow"></use>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="main-catalog__body">
+                                <article class="product">
+                                    <a href="#" class="product__image _ibg">
+                                        <img src="@img/product-slider/black-mockup-tees.jpg" alt="black-mockup-tees">
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>MOCKUP Black</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$30.00</span>
+                                    </div>
+                                </article>
+                                <article class="product">
+                                    <a href="#" class="product__image _ibg">
+                                        <img src="@img/product-slider/monochromat-tees.jpg" alt="monochromat-tees">
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>Monochromatic Wardrobe</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$27.00</span>
+                                    </div>
+                                </article>
+                                <article class="product">
+                                    <a href="#" class="product__image _ibg">
+                                        <img src="@img/product-slider/black-tees.jpg" alt="black-tees">
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>UTRAANET Black</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$43.00</span>
+                                    </div>
+                                </article>
+                                <article class="product">
+                                    <a href="#" class="product__image _ibg">
+                                        <img src="@img/product-slider/сlassic-tees.jpg" alt="сlassic-tees">
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>Classic Monochrome Tees</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$35.00</span>
+                                    </div>
+                                </article>
+                                <article class="product">
+                                    <a href="#" class="product__image _ibg">
+                                        <img src="@img/product-slider/white-tees.jpg" alt="white-tees">
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>Essential Neutrals</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$22.00</span>
+                                    </div>
+                                </article>
+                                <article class="product">
+                                    <a href="#" class="product__image _ibg">
+                                        <img src="@img/product-slider/sweater.jpg" alt="sweater">
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>Elegant Ebony Sweatshirts</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$35.00</span>
+                                    </div>
+                                </article>
+                                <article class="product">
+                                    <a href="#" class="product__image _ibg">
+                                        <img src="@img/product-slider/hoodie.jpg" alt="hoodie">
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>Sleek and Cozy Black</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$57.00</span>
+                                    </div>
+                                </article>
+                                <article class="product">
+                                    <a href="#" class="product__image _ibg">
+                                        <img src="@img/product-slider/raw-black-tees.jpg" alt="raw-black-tees">
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>Raw Black Tees</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$19.00</span>
+                                    </div>
+                                </article>
+                                <article class="product">
+                                    <a href="#" class="product__image _ibg">
+                                        <img src="@img/product-slider/black-mockup-tees.jpg" alt="black-mockup-tees">
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>MOCKUP Black</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$30.00</span>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="main-catalog__pagging pagging">
+                                <div class="pagging__inner">
+                                    <button type="button" class="pagging__button pagging__prev">
+                                        <svg class="pagging__arrow pagging__arrow_left">
+                                            <use xlink:href="@img/icons/icons.svg#spoller-arrow"></use>
+                                        </svg>
+                                    </button>
+                                    <ul class="pagging__list">
+                                        <li class="pagging__item"><a href="#"
+                                                class="pagging__link pagging__link_active">1</a></li>
+                                        <li class="pagging__item"><a href="#" class="pagging__link">2</a></li>
+                                        <li class="pagging__item"><a href="#" class="pagging__link">...</a></li>
+                                        <li class="pagging__item"><a href="#" class="pagging__link">23</a></li>
+                                        <li class="pagging__item"><a href="#" class="pagging__link">24</a></li>
+                                    </ul>
+                                    <button type="button" class="pagging__button pagging__next">
+                                        <svg class="pagging__arrow pagging__arrow_active pagging__arrow_right">
+                                            <use xlink:href="@img/icons/icons.svg#spoller-arrow"></use>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="subscribe">
+                <div class="subscribe__container _container">
+                    <div class="subscribe__body">
+                        <div class="subscribe__info">
+                            <h2 class="subscribe__title section-title">Join Our Newsletter</h2>
+                            <p class="subscribe__text">We love to surprise our subscribers with occasional gifts.</p>
+                        </div>
+                        <form action="#" class="subscribe__form main-form">
+                            <input type="email" class="main-form__input main-form__input_main" name="form-email"
+                                id="form-email" placeholder="Your email address" required>
+                            <button class="main-form__button button" type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('html/footer.html',{})
+    </div>
+
+    @@include('html/modals.html',{})
+
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

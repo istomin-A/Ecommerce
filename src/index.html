@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html',{
+"title": "Ecommerce"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/header.html',{})
+        <main class="main">
+            <section class="intro">
+                <div class="intro__container _container">
+                    <div class="intro__body">
+                        <div class="intro__content">
+                            <h1 class="intro__title">Fresh Arrivals Online</h1>
+                            <p class="intro__text">Discover Our Newest Collection Today.</p>
+                            <a href="#" class="intro__button button button_arrow">
+                                View Collection
+                                <svg class="button__arrow">
+                                    <use xlink:href="@img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="intro__media">
+                            <img class="intro__ellipse" src="@img/intro/ellipse.svg" alt="">
+                            <img class="intro__star" src="@img/intro/star.svg" alt="">
+                            <img class="intro__boy" src="@img/intro/boy.png" alt="boy">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="advantages">
+                <div class="advantages__container _container">
+                    <div class="advantages__body">
+                        <div class="advantages__item">
+                            <img class="advantages__icon" src="@img/advantages/delivery.svg" alt="delivery">
+                            <div class="advantages__title">Free Shipping</div>
+                            <p class="advantages__text">
+                                Upgrade your style today and get FREE shipping on all orders! Don't miss out.
+                            </p>
+                        </div>
+                        <div class="advantages__item">
+                            <img class="advantages__icon" src="@img/advantages/guarantee.svg" alt="guarantee">
+                            <div class="advantages__title">Satisfaction Guarantee</div>
+                            <p class="advantages__text">
+                                Shop confidently with our Satisfaction Guarantee: Love it or get a refund.
+                            </p>
+                        </div>
+                        <div class="advantages__item">
+                            <img class="advantages__icon" src="@img/advantages/payment.svg" alt="payment">
+                            <div class="advantages__title">Secure Payment</div>
+                            <p class="advantages__text">
+                                Your security is our priority. Your payments are secure with us.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="product-slider">
+                <div class="product-slider__container _container">
+                    <h2 class="product-slider__title section-title">Best Selling</h2>
+                    <div class="product-slider__slider swiper">
+                        <div class="product-slider__swiper swiper-wrapper">
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-slider__product product">
+                                    <a href="#" class="product__image _ibg">
+                                        <img src="@img/product-slider/сlassic-tees.jpg" alt="сlassic-tees">
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>Classic Monochrome Tees</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$35.00</span>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-slider__product product">
+                                    <a href="#" class="product__image _ibg">
+                                        <img src="@img/product-slider/monochromat-tees.jpg" alt="monochromat-tees">
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>Monochromatic Wardrobe</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$27.00</span>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-slider__product product">
+                                    <a href="#" class="product__image _ibg">
+                                        <img src="@img/product-slider/white-tees.jpg" alt="white-tees">
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>Essential Neutrals</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$22.00</span>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-slider__product product">
+                                    <a href="#" class="product__image _ibg">
+                                        <img src="@img/product-slider/black-tees.jpg" alt="black-tees">
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>UTRAANET Black</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$43.00</span>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-slider__product product">
+                                    <a href="#" class="product__image _ibg">
+                                        <img src="@img/product-slider/сlassic-tees.jpg" alt="сlassic-tees">
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>Classic Monochrome Tees</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$35.00</span>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-slider__product product">
+                                    <a href="#" class="product__image _ibg">
+                                        <img src="@img/product-slider/white-tees.jpg" alt="white-tees">
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>Essential Neutrals</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$22.00</span>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="browse">
+                <div class="browse__container _container">
+                    <div class="browse__body">
+                        <div class="browse__content">
+                            <h2 class="browse__title section-title">Browse Our Fashion Paradise!</h2>
+                            <p class="browse__text">
+                                Step into a world of style and explore our diverse collection of clothing categories.
+                            </p>
+                            <a href="#" class="browse__button button button_arrow">
+                                Start Browsing
+                                <svg class="button__arrow">
+                                    <use xlink:href="@img/icons/icons.svg#arrow"></use>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="browse__media">
+                            <img class="browse__image" src="@img/browse/image.png" alt="sweater">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="product-slider">
+                <div class="product-slider__container _container">
+                    <h2 class="product-slider__title section-title">Featured</h2>
+                    <div class="product-slider__slider swiper">
+                        <div class="product-slider__swiper swiper-wrapper">
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-slider__product product">
+                                    <a href="#" class="product__image _ibg">
+                                        <img src="@img/product-slider/sweater.jpg" alt="sweater">
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>Elegant Ebony Sweatshirts</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$35.00</span>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-slider__product product">
+                                    <a href="#" class="product__image _ibg">
+                                        <img src="@img/product-slider/hoodie.jpg" alt="hoodie">
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>Sleek and Cozy Black</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$57.00</span>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-slider__product product">
+                                    <a href="#" class="product__image _ibg">
+                                        <img src="@img/product-slider/raw-black-tees.jpg" alt="raw-black-tees">
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>Raw Black Tees</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$19.00</span>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-slider__product product">
+                                    <a href="#" class="product__image _ibg">
+                                        <img src="@img/product-slider/black-mockup-tees.jpg" alt="black-mockup-tees">
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>MOCKUP Black</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$30.00</span>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-slider__product product">
+                                    <a href="#" class="product__image _ibg">
+                                        <img src="@img/product-slider/hoodie.jpg" alt="hoodie">
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>Sleek and Cozy Black</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$57.00</span>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="product-slider__slide swiper-slide">
+                                <article class="product-slider__product product">
+                                    <a href="#" class="product__image _ibg">
+                                        <img src="@img/product-slider/black-mockup-tees.jpg" alt="black-mockup-tees">
+                                    </a>
+                                    <a href="#" class="product__title">
+                                        <h3>MOCKUP Black</h3>
+                                    </a>
+                                    <div class="product__details">
+                                        <span class="product__stock in-stock">IN STOCK</span>
+                                        <span class="product__price">$30.00</span>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="subscribe">
+                <div class="subscribe__container _container">
+                    <div class="subscribe__body">
+                        <div class="subscribe__info">
+                            <h2 class="subscribe__title section-title">Join Our Newsletter</h2>
+                            <p class="subscribe__text">We love to surprise our subscribers with occasional gifts.</p>
+                        </div>
+                        <form action="#" class="subscribe__form main-form">
+                            <input type="email" class="main-form__input main-form__input_main" name="form-email"
+                                id="form-email" placeholder="Your email address" required>
+                            <button class="main-form__button button" type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('html/footer.html',{})
+    </div>
+
+    @@include('html/modals.html',{})
+
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>

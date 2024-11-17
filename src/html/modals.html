@@ -1,0 +1,69 @@
+<dialog class="modal" data-modal-target="modal-share">
+    <div class="modal__content">
+        <button class="modal__close _modal-close" type="button">
+            <svg class="modal__icon-close">
+                <use xlink:href="@img/icons/icons.svg#close"></use>
+            </svg>
+        </button>
+        <div class="share">
+            <div class="share__title">Copy Link</div>
+            <div class="share__body">
+                <div class="share__link">https://devcut.io/ecommerce/product/num#1234567?query=!less/123</div>
+                <button class="share__copy">
+                    <svg class="share__icon-copy">
+                        <use xlink:href="@img/icons/icons.svg#copy"></use>
+                    </svg>
+                </button>
+                <div class="share__out"></div>
+            </div>
+            <div class="share__title">Share</div>
+            <ul class="social social_start">
+                <li class="social__item">
+                    <a href="#" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href="@img/icons/icons.svg#instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a href="#" class="social__link">
+                        <svg class="social__icon">
+                            <use xlink:href="@img/icons/icons.svg#youtube"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</dialog>
+
+<dialog class="modal" data-modal-target="modal-reviews">
+    <div class="modal__content">
+        <button class="modal__close _modal-close" type="button">
+            <svg class="modal__icon-close">
+                <use xlink:href="@img/icons/icons.svg#close"></use>
+            </svg>
+        </button>
+        <div class="write-review">
+            <div class="write-review__title">Write Review</div>
+            <form action="#" class="write-review__form main-form">
+                <label>
+                    <span>Email</span>
+                    <input type="email" class="main-form__input main-form__input_main main-form__input_small"
+                        name="form-review-email" id="form-review-email" placeholder="Your email address" required>
+                </label>
+                <label>
+                    <span>Full name</span>
+                    <input type="text" class="main-form__input main-form__input_main main-form__input_small"
+                        name="form-review-name" id="form-review-name" placeholder="Your full name" required>
+                </label>
+                <label>
+                    <span>Review</span>
+                    <textarea name="form-review-review" id="form-review-review" class="main-form__textarea"
+                        placeholder="Write review"></textarea>
+                </label>
+                <button class="main-form__button_review button" type="submit">Submit Your Review</button>
+            </form>
+        </div>
+    </div>
+</dialog>

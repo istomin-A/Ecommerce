@@ -1,0 +1,147 @@
+// * import functions
+@use 'modules/tools/functions' as func;
+// * import variables
+@use 'modules/tools/variables' as var;
+
+// =======================================================================================================
+.catalog {
+    padding: func.rem(30) func.rem(0) func.rem(80) func.rem(0);
+
+    @media (max-width: var.$tablet) {
+        padding: func.rem(30) func.rem(0) func.rem(40) func.rem(0);
+    }
+
+    @media (max-width: var.$mobile) {
+        padding: func.rem(20) func.rem(0) func.rem(30) func.rem(0);
+    }
+
+    &__container {}
+
+    &__body {
+        display: grid;
+        grid-template-columns: func.rem(250) 1fr;
+        gap: func.rem(30);
+
+        @media (max-width: var.$mobile) {
+            grid-template-columns: 1fr;
+            gap: func.rem(20);
+        }
+    }
+
+    &__filter {}
+
+    &__main {}
+}
+
+.main-catalog {
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: func.rem(15);
+        margin: func.rem(0) func.rem(0) func.rem(30) func.rem(0);
+
+        @media (max-width: var.$mobileSmall) {
+            flex-direction: column;
+            align-items: start;
+            gap: func.rem(8);
+        }
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: func.rem(14);
+        color: #5C5F6A;
+        line-height: func.prc(22, 14);
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(func.rem(211), 1fr));
+        gap: func.rem(25);
+
+        &:not(:last-child) {
+            margin: func.rem(0) func.rem(0) func.rem(40) func.rem(0);
+        }
+    }
+
+    &__pagging {}
+}
+
+.filter-catalog {
+
+    &__inner {
+        padding: func.rem(25) func.rem(20);
+        border: func.rem(2) solid #E6E7E8;
+        border-radius: func.rem(5);
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: func.rem(16);
+        color: #0E1422;
+        margin: func.rem(0) func.rem(0) func.rem(30) func.rem(0);
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: func.rem(15);
+
+        &:not(:last-child) {
+            margin: func.rem(0) func.rem(0) func.rem(20) func.rem(0);
+        }
+    }
+
+    &__label {
+        display: flex;
+        align-items: center;
+        gap: func.rem(10);
+        position: relative;
+        padding: func.rem(0) func.rem(0) func.rem(10) func.rem(0);
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: func.rem(2);
+            background-color: #E9E9EB;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    &__checkbox {}
+
+    &__checkbox-custom {
+        display: inline-block;
+        width: func.rem(20);
+        height: func.rem(20);
+        border: func.rem(2) solid #E6E7E8;
+        border-radius: func.rem(3);
+        position: relative;
+
+        &::before {
+            content: '';
+            display: inline-block;
+            width: func.rem(12);
+            height: func.rem(12);
+            background-color: rgba(14, 20, 34, .5);
+            border-radius: func.rem(3);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 0.3s ease 0s;
+        }
+    }
+
+    &__info {
+        color: #474B57;
+    }
+
+    &__price {}
+}
