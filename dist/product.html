@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css?_v=20241117133157">
+    <link rel="stylesheet" href="css/style.min.css?_v=20241117141006">
     <title>Ecommerce - product</title>
 </head>
 
@@ -19,7 +19,7 @@
     <div class="header__main">
         <div class="header__container _container">
             <div class="header__body">
-                <a href="#" class="logo"><img src="img/general/logo.svg" alt="logo"></a>
+                <a href="#" class="logo" aria-label="logo"><img src="img/general/logo.svg" alt="logo"></a>
                 <div class="menu">
                     <button class="burger" aria-label="Открыть меню" aria-expanded="false"><span></span></button>
                     <nav class="menu__body">
@@ -60,18 +60,18 @@
                     <input type="text" class="main-form__input" name="form-header-search" id="form-header-search"
                         placeholder="Search products">
                     <button class="main-form__button-search">
-                        <svg class="main-form__icon-search">
+                        <svg class="main-form__icon-search" aria-label="search">
                             <use xlink:href="img/icons/icons.svg#search"></use>
                         </svg>
                     </button>
                 </form>
                 <div class="header__actions">
-                    <a href="#" class="header__cart">
+                    <a href="#" class="header__cart" aria-label="cart">
                         <svg class="header__icon-cart">
                             <use xlink:href="img/icons/icons.svg#cart"></use>
                         </svg>
                     </a>
-                    <a href="#" class="header__user">
+                    <a href="#" class="header__user" aria-label="login">
                         <svg class="header__icon-user">
                             <use xlink:href="img/icons/icons.svg#user"></use>
                         </svg>
@@ -87,7 +87,7 @@
                     <nav class="breadbcrumbs breadbcrumbs_line">
                         <ul class="breadbcrumbs__list">
                             <li class="breadbcrumbs__item">
-                                <a href="#" class="breadbcrumbs__link">
+                                <a href="#" class="breadbcrumbs__link" aria-label="Ecommerce home">
                                     Ecommerce
                                     <svg class="breadbcrumbs__icon">
                                         <use xlink:href="img/icons/icons.svg#spoller-arrow"></use>
@@ -134,7 +134,7 @@
                                 <h1 class="product-main__title section-title">Raw Black T-Shirt Lineup</h1>
                                 <button type="button" class="product-main__button-share _modal-open"
                                     data-modal-path="modal-share">
-                                    <svg class="product-main__share">
+                                    <svg class="product-main__share" aria-label="button share">
                                         <use xlink:href="img/icons/icons.svg#share"></use>
                                     </svg>
                                 </button>
@@ -212,7 +212,8 @@
                             <div class="product-main__quantity">
                                 <div class="product-main__text product-main__text_uptext">Quantity</div>
                                 <div class="quantity">
-                                    <button type="button" class="quantity__button quantity__button_minus">
+                                    <button type="button" class="quantity__button quantity__button_minus"
+                                        aria-label="quantity button minus">
                                         <svg class="quantity__icon">
                                             <use xlink:href="img/icons/icons.svg#minus"></use>
                                         </svg>
@@ -221,7 +222,8 @@
                                         <input class="quantity__input" type="text" autocomplete="off"
                                             name="quantity-product" value="1" readonly>
                                     </div>
-                                    <button type="button" class="quantity__button quantity__button_plus">
+                                    <button type="button" class="quantity__button quantity__button_plus"
+                                        aria-label="quantity button plus">
                                         <svg class="quantity__icon">
                                             <use xlink:href="img/icons/icons.svg#plus"></use>
                                         </svg>
@@ -230,7 +232,7 @@
                             </div>
                             <div class="product-main__inner product-main__inner_margin-bottom">
                                 <a href="#" class="product-main__button button">Add to cart</a>
-                                <a href="#" class="product-main__border">
+                                <a href="#" class="product-main__border" aria-label="button favorite">
                                     <svg class="product-main__favorite">
                                         <use xlink:href="img/icons/icons.svg#favorite"></use>
                                     </svg>
@@ -244,7 +246,7 @@
             <section class="product-detail">
                 <div class="product-detail__container _container">
                     <div class="tab-detail _tab">
-                        <div class="tab-detail__buttons" role="tablist" aria-label="Блок с кнопками для табов">
+                        <div class="tab-detail__buttons" role="tablist" aria-label="Block with buttons for tabs">
                             <button class="tab-detail__button _tab-button _active" role="tab" aria-selected="true"
                                 aria-controls="tabpanel-one" data-tab-path="tab-detail">
                                 Details
@@ -535,14 +537,14 @@
                     <p class="footer__text">DevCut is a YouTube channel for practical project-based learning.</p>
                     <ul class="social">
                         <li class="social__item">
-                            <a href="#" class="social__link">
+                            <a href="#" class="social__link" aria-label="instagram">
                                 <svg class="social__icon">
                                     <use xlink:href="img/icons/icons.svg#instagram"></use>
                                 </svg>
                             </a>
                         </li>
                         <li class="social__item">
-                            <a href="#" class="social__link">
+                            <a href="#" class="social__link" aria-label="youtube">
                                 <svg class="social__icon">
                                     <use xlink:href="img/icons/icons.svg#youtube"></use>
                                 </svg>
@@ -681,7 +683,7 @@
     </div>
 </dialog>
 
-    <script src="js/app.min.js?_v=20241117133157"></script>
+    <script src="js/app.min.js?_v=20241117141006"></script>
 </body>
 
 </html>

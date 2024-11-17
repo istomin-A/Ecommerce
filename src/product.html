@@ -14,7 +14,7 @@
                     <nav class="breadbcrumbs breadbcrumbs_line">
                         <ul class="breadbcrumbs__list">
                             <li class="breadbcrumbs__item">
-                                <a href="#" class="breadbcrumbs__link">
+                                <a href="#" class="breadbcrumbs__link" aria-label="Ecommerce home">
                                     Ecommerce
                                     <svg class="breadbcrumbs__icon">
                                         <use xlink:href="@img/icons/icons.svg#spoller-arrow"></use>
@@ -61,7 +61,7 @@
                                 <h1 class="product-main__title section-title">Raw Black T-Shirt Lineup</h1>
                                 <button type="button" class="product-main__button-share _modal-open"
                                     data-modal-path="modal-share">
-                                    <svg class="product-main__share">
+                                    <svg class="product-main__share" aria-label="button share">
                                         <use xlink:href="@img/icons/icons.svg#share"></use>
                                     </svg>
                                 </button>
@@ -139,7 +139,8 @@
                             <div class="product-main__quantity">
                                 <div class="product-main__text product-main__text_uptext">Quantity</div>
                                 <div class="quantity">
-                                    <button type="button" class="quantity__button quantity__button_minus">
+                                    <button type="button" class="quantity__button quantity__button_minus"
+                                        aria-label="quantity button minus">
                                         <svg class="quantity__icon">
                                             <use xlink:href="@img/icons/icons.svg#minus"></use>
                                         </svg>
@@ -148,7 +149,8 @@
                                         <input class="quantity__input" type="text" autocomplete="off"
                                             name="quantity-product" value="1" readonly>
                                     </div>
-                                    <button type="button" class="quantity__button quantity__button_plus">
+                                    <button type="button" class="quantity__button quantity__button_plus"
+                                        aria-label="quantity button plus">
                                         <svg class="quantity__icon">
                                             <use xlink:href="@img/icons/icons.svg#plus"></use>
                                         </svg>
@@ -157,7 +159,7 @@
                             </div>
                             <div class="product-main__inner product-main__inner_margin-bottom">
                                 <a href="#" class="product-main__button button">Add to cart</a>
-                                <a href="#" class="product-main__border">
+                                <a href="#" class="product-main__border" aria-label="button favorite">
                                     <svg class="product-main__favorite">
                                         <use xlink:href="@img/icons/icons.svg#favorite"></use>
                                     </svg>
@@ -171,7 +173,7 @@
             <section class="product-detail">
                 <div class="product-detail__container _container">
                     <div class="tab-detail _tab">
-                        <div class="tab-detail__buttons" role="tablist" aria-label="Блок с кнопками для табов">
+                        <div class="tab-detail__buttons" role="tablist" aria-label="Block with buttons for tabs">
                             <button class="tab-detail__button _tab-button _active" role="tab" aria-selected="true"
                                 aria-controls="tabpanel-one" data-tab-path="tab-detail">
                                 Details

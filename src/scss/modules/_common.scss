@@ -73,6 +73,7 @@
         min-height: func.rem(45);
         color: #878A92;
         font-weight: 500;
+        font-size: func.rem(16);
         line-height: func.prc(24, 16);
         border: 2px solid rgba(135, 138, 146, .5);
         border-radius: func.rem(7);
@@ -96,6 +97,7 @@
         &_main {
             max-width: none;
             width: 100%;
+            font-size: func.rem(16);
             padding: func.rem(0) func.rem(15) func.rem(0) func.rem(15);
         }
 

@@ -217,6 +217,7 @@ body._lock {
   min-height: 2.8125rem;
   color: #878A92;
   font-weight: 500;
+  font-size: 1rem;
   line-height: 150%;
   border: 2px solid rgba(135, 138, 146, 0.5);
   border-radius: 0.4375rem;
@@ -237,6 +238,7 @@ body._lock {
 .main-form__input_main {
   max-width: none;
   width: 100%;
+  font-size: 1rem;
   padding: 0rem 0.9375rem 0rem 0.9375rem;
 }
 
