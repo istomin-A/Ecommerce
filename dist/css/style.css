@@ -279,6 +279,7 @@ body._lock {
   width: 100%;
   min-width: 21.5625rem;
   color: #878A92;
+  font-size: 1rem;
   font-weight: 500;
   line-height: 150%;
   border: 2px solid rgba(135, 138, 146, 0.5);
